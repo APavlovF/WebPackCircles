@@ -5,7 +5,7 @@ COPY *.sln ./
 COPY *.csproj ./
 RUN dotnet restore 
 
-COPY . .
+COPY . ./
 RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false 
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
