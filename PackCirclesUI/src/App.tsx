@@ -49,7 +49,7 @@ export default function App() {
     setLoading(true);
     try {
       // Send the request using the native Fetch API
-      const API_BASE_URL = "https://webpackcircles.onrender.com/";
+      const API_BASE_URL = "https://webpackcircles.onrender.com";
 	  const response = await fetch(`${API_BASE_URL}/api/circlepositions`, {
         method: 'POST', // Matches your [HttpPost] attribute
         headers: {
