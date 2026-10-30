@@ -1,17 +1,11 @@
 import { useEffect, useRef } from 'react';
-
-interface CircleFromCSharp {
-  diameter: number;
-  isFilled: boolean;
-  x: number; // Center X
-  y: number; // Center Y
-}
+import { type Circle } from './App';
 
 interface CanvasPreviewProps {
   title: string;
   width: number;  // Sheet width from C# (in mm)
   height: number; // Sheet height from C# (in mm)
-  circles: CircleFromCSharp[];
+  circles: Circle[];
 }
 
 export default function CanvasPreview({ title, width, height, circles }: CanvasPreviewProps) {

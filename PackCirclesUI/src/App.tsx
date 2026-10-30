@@ -1,7 +1,7 @@
-interface Circle {
+export interface Circle {
   x: number;
   y: number;
-  radius: number;
+  diameter: number;
   isFilled: boolean;
 }
 
@@ -49,7 +49,8 @@ export default function App() {
     setLoading(true);
     try {
       // Send the request using the native Fetch API
-      const response = await fetch('https://localhost:7280/api/circlepositions', {
+      const API_BASE_URL = "https://webpackcircles.onrender.com/";
+	  const response = await fetch(`${API_BASE_URL}/api/circlepositions`, {
         method: 'POST', // Matches your [HttpPost] attribute
         headers: {
           'Content-Type': 'application/json', // Tells C# [FromBody] to expect JSON
