@@ -6,14 +6,6 @@ public abstract class CirclePacker
 {
     public const double Eps = 1e-9;
 
-    public record struct PackContext(
-        double EffectiveW,
-        double EffectiveH,
-        double Pitch,
-        double Margin,
-        double D
-    );
-
     public List<Circle> Pack(double w, double h, double d, double gap, double margin)
     {
         List<Circle> result = [];
