@@ -6,7 +6,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        policy => policy.WithOrigins("https://github.io") 
+        policy => policy.WithOrigins("https://apavlovf.github.io") 
             .AllowAnyMethod()
             .AllowAnyHeader());
 });
