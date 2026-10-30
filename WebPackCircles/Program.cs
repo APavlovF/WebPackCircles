@@ -6,7 +6,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        policy => policy.WithOrigins("https://apavlovf.github.io") 
+        policy => policy.WithOrigins("https://apavlovf.github.io")
             .AllowAnyMethod()
             .AllowAnyHeader());
 });
@@ -21,10 +21,10 @@ builder.Services.AddTransient<ResponseService>();
 
 WebApplication app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+//if (app.Environment.IsDevelopment())
+//{
+app.MapOpenApi();
+//}
 
 app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
