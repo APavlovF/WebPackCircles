@@ -1,4 +1,3 @@
-
 using WebPackCircles.Services;
 using WebPackCircles.Work;
 
@@ -20,6 +19,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddKeyedTransient<CirclePacker, RectangularPacker>(PackingStrategy.Rectangular);
 builder.Services.AddKeyedTransient<CirclePacker, TriangularPacker>(PackingStrategy.Triangular);
 builder.Services.AddTransient<ICalculateService, CalculateService>();
+builder.Services.AddTransient<ResponseService>();
 
 WebApplication app = builder.Build();
 
